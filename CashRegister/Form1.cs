@@ -42,7 +42,7 @@ namespace CashRegister
             {
                 numOfRifles = Convert.ToInt32(rifleInput.Text);
                 numOfRounds = Convert.ToInt32(roundsInput.Text);
-                numOfScopes = Convert.ToInt32(scopesInput.Text);
+                numOfScopes = Convert.ToInt32(scopesInput.Text); 
 
                 subtotalAmmount = numOfRifles * riflePrice + numOfRounds * roundsPrice + numOfScopes * scopesPrice;
                 taxAmmount = taxPrice * subtotalAmmount;
