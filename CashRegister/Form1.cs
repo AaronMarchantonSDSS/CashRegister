@@ -84,49 +84,41 @@ namespace CashRegister
             }
             catch
             {
-                changeOutputLabel.Text = "ERROR";
+                changeOutputLabel.Text = "Invalid #";
             }
         }
 
         private void printReceiptButton_Click(object sender, EventArgs e)
         {
             this.Size = new Size(816, 673); //Resize Form
-            receiptOutputLabel.TextAlign = ContentAlignment.TopLeft;
 
+            receiptOutputLabel.TextAlign = ContentAlignment.TopLeft;
             receiptOutputLabel.Text = "\n                              The Black Market";
             receiptOutputLabel.Text += $"\n\n    Order Number 1076";
             receiptOutputLabel.Text += $"\n    February 22, 2024";
+            receiptOutputLabel.Text += $"\n";
+            receiptOutputLabel.Text += "";
+            receiptOutputLabel.Text += "";
 
             if (numOfRifles > 0.1) //Only Print if Greater
             {
                 receiptOutputLabel.Text += $"\n\n    Rifles                                             x{numOfRifles} @ {riflePrice.ToString("00.00")} BTC";
-            }
-            else
-            {
-                receiptOutputLabel.Text += $"\n";
             }
 
             if (numOfRounds > 0.1) //Only Print if Greater
             {
                 receiptOutputLabel.Text += $"\n    Rounds                                          x{numOfRounds} @ {roundsPrice.ToString("00.00")} BTC";
             }
-            else
-            {
-                receiptOutputLabel.Text += "";
-            }
 
             if (numOfScopes > 0.1) //Only Print if Greater
             {
                 receiptOutputLabel.Text += $"\n    Scopes                                          x{numOfScopes} @ {scopesPrice.ToString("00.00")} BTC";
             }
-            else
-            {
-                receiptOutputLabel.Text += "";
-            }
 
             receiptOutputLabel.Text += $"\n\n    Subtotal                                               $ {subtotalAmmount.ToString("00.00")} BTC";
             receiptOutputLabel.Text += $"\n    Tax                                                      $ {taxAmmount.ToString("00.00")} BTC";
-            receiptOutputLabel.Text += $"\n    Total                                                    $ {totalAmmount.ToString("00.00")} BTC";             receiptOutputLabel.Text += $"\n\n    Tendered                                              $ {ammountTendered.ToString("00.00")} BTC";
+            receiptOutputLabel.Text += $"\n    Total                                                    $ {totalAmmount.ToString("00.00")} BTC";             
+            receiptOutputLabel.Text += $"\n\n    Tendered                                              $ {ammountTendered.ToString("00.00")} BTC";
             receiptOutputLabel.Text += $"\n    Change                                                $ {changeAmmount.ToString("00.00")} BTC";
             receiptOutputLabel.Text += $"\n\n    Have a Nice Day:)";
 
