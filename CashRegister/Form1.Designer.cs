@@ -238,6 +238,7 @@
             // calculateChangeButton
             // 
             this.calculateChangeButton.BackColor = System.Drawing.Color.Black;
+            this.calculateChangeButton.Enabled = false;
             this.calculateChangeButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.calculateChangeButton.FlatAppearance.BorderSize = 3;
             this.calculateChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -277,6 +278,7 @@
             // printReceiptButton
             // 
             this.printReceiptButton.BackColor = System.Drawing.Color.Black;
+            this.printReceiptButton.Enabled = false;
             this.printReceiptButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.printReceiptButton.FlatAppearance.BorderSize = 3;
             this.printReceiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -370,7 +372,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "The Black Market";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
